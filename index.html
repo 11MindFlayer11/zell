@@ -9,155 +9,182 @@
 
 <body>
 
-  <audio id="bgMusic" src="song.mp3"></audio>
+  <audio id="bgMusic" src="song.mp3" loop></audio>
 
   <!-- PAGE 1 -->
-  <div id="page1" class="page active">
-    <h1>Will u be my Valentine? 💖✨</h1>
-  </div>
+<div id="page1" class="page active">
+  <h1>Will u be my Valentine? 💖✨</h1>
 
-  <!-- PAGE 2 -->
-  <div id="page2" class="page">
-    <h2>You were always meant to click Yes 😌💞</h2>
-    <button class="next-btn" onclick="goToPage('page3')">Next ✨</button>
-  </div>
-
-  <!-- PAGE 3 -->
-<div id="page3" class="page">
-  <h2 class="main-line">
-    heh, searching for a no? too late for that.
-  </h2>
-
-  <h2 class="main-line">
-    you're stuck w me now.
-  </h2>
-
-  <h2 class="main-line">
-    anywaysss, now that you've accepted being my valentine,
-  </h2>
-
-  <h2 class="main-line">
-    pressss nexttt without any further adooooo.
-  </h2>
-
-  <br><br>
-  <button class="next-btn" onclick="goToRomcom(event)">
-    Next 🎬
+  <button class="main-yes-btn" onclick="handleYesClick(event)">
+    Yes 💘
   </button>
 </div>
 
-<!-- PAGE 4 -->
-<div id="page4" class="page">
 
-  <h1 id="r1" class="romcom hidden-text">
-    This wasn’t an accident.
-  </h1>
+  <!-- PAGE 3 -->
+  <div id="page3" class="page">
+    <h2 class="main-line">heh, searching for a no? too late for that.</h2>
+    <h2 class="main-line">you're stuck w me now.</h2>
+    <h2 class="main-line">anywaysss, now that you've accepted being my valentine,</h2>
+    <h2 class="main-line">pressss nexttt without any further adooooo.</h2>
 
-  <h1 id="r2" class="romcom hidden-text">
-    I strategically placed myself in your life.
-  </h1>
+    <br><br>
+    <button class="next-btn" onclick="goToPage('page5')">
+      Next 🎬
+    </button>
+  </div>
 
-  <img id="r2img" src="smirk.png" class="romcom-img hidden-text" />
+  <!-- PAGE 5 - FULL SCROLL STORY -->
+  <div id="page5" class="page scroll-page">
 
-  <h1 id="r3" class="romcom hidden-text">
-    I executed phase one: make her laugh.
-  </h1>
+    <!-- Former Page 4 merged here -->
+    <section class="scroll-section">
+      <h1 class="scroll-text">This wasn’t an accident.</h1>
+      <h3 class="scroll-text">(Scroll down)</h3>
 
-  <img id="r3img" src="laugh.png" class="romcom-img hidden-text" />
+    </section>
 
-  <h1 id="r4" class="romcom hidden-text">
-    Phase two: fall harder than expected.
-  </h1>
+    <section class="scroll-section">
+      <h1 class="scroll-text">
+        I strategically placed myself in your life.
+      </h1>
+    </section>
 
-</div>
+    <section class="scroll-section">
+      <h1 class="scroll-text">
+        I executed phase one: make her laugh.
+      </h1>
+    </section>
 
-<!-- PAGE 5 - Scroll Story -->
-<div id="page5" class="page scroll-page">
+    <section class="scroll-section">
+      <h1 class="scroll-text">
+        Or atleast... tried to?
+      </h1>
+    </section>
 
-  <section class="scroll-section">
-    <h1 class="scroll-text">
-      I started liking you a little
-      <span class="big-word">more</span>
-      than I planned.
-    </h1>
-  </section>
+    <section class="scroll-section">
+      <h1 class="scroll-text">
+        cuz what is this 😭😭😭 
+      </h1>
+      <h3 class ="scroll-text"> (i love it;)</h3>
+    </section>
 
-  <section class="scroll-section">
-    <h1 class="scroll-text">It was supposed to be chill.</h1>
-  </section>
+    <section class="scroll-section">
+      <h1 class="scroll-text">
+        But the unexpected parttt?
+      </h1>
+    </section>
 
-  <section class="scroll-section">
-    <h1 class="scroll-text">Weren’t we supposed to be just friends?</h1>
-  </section>
+    <!-- Scroll Story -->
+    <section class="scroll-section">
+      <h1 class="scroll-text">
+        I started liking you a little
+        <span class="big-word">more</span>
+        than I planned.
+      </h1>
+    </section>
 
-  <section class="scroll-section">
-    <h1 class="scroll-text">Very “haha we’ll see where this goes.”</h1>
-  </section>
+    <section class="scroll-section">
+      <h1 class="scroll-text">It was supposed to be chill.</h1>
+    </section>
 
-  <section class="scroll-section">
-    <h1 class="scroll-text">But then you kept being you.</h1>
-  </section>
+    <section class="scroll-section">
+      <h1 class="scroll-text">Weren’t we supposed to be just friends?</h1>
+    </section>
 
-  <section class="scroll-section">
-    <h1 class="scroll-text">And that’s extremely unfair.</h1>
-  </section>
+    <section class="scroll-section">
+      <h1 class="scroll-text">Very “haha we’ll see where this goes.”</h1>
+    </section>
 
-  <section class="scroll-section">
-    <h1 class="scroll-text">Because now…</h1>
-  </section>
+    <section class="scroll-section">
+      <h1 class="scroll-text">But then you kept being you.</h1>
+    </section>
 
-  <section class="scroll-section">
-    <h1 class="scroll-text">I look forward to your texts.</h1>
-  </section>
+    <section class="scroll-section">
+      <h1 class="scroll-text">And that’s extremely unfair.</h1>
+    </section>
 
-  <section class="scroll-section">
-    <h1 class="scroll-text">I randomly smile at my phone.</h1>
-  </section>
+    <section class="scroll-section">
+      <h1 class="scroll-text">Because now…</h1>
+    </section>
 
-  <section class="scroll-section">
-    <h1 class="scroll-text">
-      And I lowkey find myself remembering you AISE HIII
-    </h1>
-  </section>
+    <section class="scroll-section">
+      <h1 class="scroll-text">I look forward to your texts.</h1>
+    </section>
 
-  <section class="scroll-section">
-    <h1 class="scroll-text">So no…</h1>
-  </section>
+    <section class="scroll-section">
+      <h1 class="scroll-text">I randomly smile at my phone.</h1>
+    </section>
 
-  <section class="scroll-section">
-    <h1 class="scroll-text">
-      I’m not writing some dramatic “forever” speech.
-    </h1>
-  </section>
+    <section class="scroll-section">
+      <h1 class="scroll-text">
+        And I lowkey find myself remembering you AISE HIII
+      </h1>
+    </section>
 
-  <section class="scroll-section">
-    <h1 class="scroll-text">It’s only been a month.</h1>
-  </section>
+    <section class="scroll-section">
+      <h1 class="scroll-text">So no…</h1>
+    </section>
 
-  <section class="scroll-section">
-    <h1 class="scroll-text">
-      But it’s been a really, really nice month.
-    </h1>
-  </section>
+    <section class="scroll-section">
+      <h1 class="scroll-text">
+        I’m not writing some dramatic “forever” speech.
+      </h1>
+    </section>
 
-  <section class="scroll-section">
-    <h1 class="scroll-text">
-      And I’d very much like many more.
-    </h1>
-  </section>
+    <section class="scroll-section">
+      <h1 class="scroll-text">It’s only been a month.</h1>
+    </section>
 
-  <section class="scroll-section final-question">
-    <h1 class="scroll-text">
-      So… will you keep being my Valentine?
-    </h1>
+    <section class="scroll-section">
+      <h1 class="scroll-text">
+        But it’s been a really, really nice month.
+      </h1>
+    </section>
 
-  </section>
+    <section class="scroll-section">
+      <h1 class="scroll-text">
+        And I’d very much like many more.
+      </h1>
+    </section>
 
-</div>
+    <!-- Final Question -->
+    <section class="scroll-section">
+      <h1 class="scroll-text">
+        So… will you keep being my Valentine?
+      </h1>
+    </section>
 
+    <!-- Letter Scroll -->
+    <section class="scroll-section letter-section">
 
+      <div class="parchment-wrapper">
+        <img src="parch.jpg"
+             class="parchment-img" />
 
+        <div class="parchment-text">
+          <h2>Dear You,</h2>
 
+          <p>
+            (This is placeholder text.)
+          </p>
+
+          <p>
+            You can replace this entire section
+            with your actual handwritten-style letter.
+          </p>
+
+          <p>
+            Add as many paragraphs as you want.
+            This area scrolls inside the parchment.
+          </p>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
 
   <script src="script.js"></script>
 </body>
