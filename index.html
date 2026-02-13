@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For My Chaotic Fairy Barbie 💖</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      height: 100vh;
+      background: url('hearts.png');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .overlay {
+      background: rgba(255, 105, 180, 0.35);
+      backdrop-filter: blur(3px);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      opacity: 1;
+      transition: opacity 1s ease;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3rem;
+      margin-bottom: 40px;
+      text-shadow: 0 0 20px white;
+    }
+
+    .btn {
+      padding: 15px 40px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      margin: 10px;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+
+    .green {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    .red {
+      background-color: #ff4d6d;
+      color: white;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px white;
+    }
+
+    .hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .glitter {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: gold;
+      border-radius: 50%;
+      pointer-events: none;
+      animation: explode 800ms ease-out forwards;
+    }
+
+    @keyframes explode {
+      from {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+      to {
+        transform: translate(var(--x), var(--y));
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="overlay"></div>
+
+  <audio id="bgMusic" src="song.mp3"></audio>
+
+  <div class="container" id="page1">
+    <h1>Will u be my Valentine? 💖</h1>
+    <button class="btn green" onclick="goNext(event)">Yes 💚</button>
+    <button class="btn red" onclick="goNext(event)">Yes ❤️</button>
+  </div>
+
+  <div class="container hidden" id="page2">
+    <h1>You had no choice anyway 😌✨</h1>
+  </div>
+
+  <script>
+    function goNext(event) {
+      const music = document.getElementById("bgMusic");
+      music.play();
+
+      createGlitter(event);
+
+      setTimeout(() => {
+        document.getElementById("page1").classList.add("hidden");
+        document.getElementById("page2").classList.remove("hidden");
+      }, 500);
+    }
+
+    function createGlitter(event) {
+      for (let i = 0; i < 40; i++) {
+        let glitter = document.createElement("div");
+        glitter.classList.add("glitter");
+
+        let x = event.clientX;
+        let y = event.clientY;
+
+        glitter.style.left = x + "px";
+        glitter.style.top = y + "px";
+
+        let randomX = (Math.random() - 0.5) * 300 + "px";
+        let randomY = (Math.random() - 0.5) * 300 + "px";
+
+        glitter.style.setProperty('--x', randomX);
+        glitter.style.setProperty('--y', randomY);
+
+        document.body.appendChild(glitter);
+
+        setTimeout(() => glitter.remove(), 800);
+      }
+    }
+  </script>
+
+</body>
+</html>
