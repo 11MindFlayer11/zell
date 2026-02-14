@@ -143,16 +143,22 @@ h1 {
 }
 
 /* LETTER */
-
 .letter-section {
   height: auto;
   padding: 120px 0;
 }
 
+.letter-layout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+/* Parchment */
 .parchment-wrapper {
   position: relative;
-  width: 700px;
-  max-width: 90%;
+  width: 600px;
 }
 
 .parchment-img {
@@ -162,13 +168,38 @@ h1 {
 
 .parchment-text {
   position: absolute;
-  top: 18%;
-  left: 20%;
-  width: 60%;
-  height: 60%;
+  top: 15%;
+  left: 18%;
+  width: 64%;
+  height: 65%;
   overflow-y: auto;
-  font-size: 18px;
+  overflow-x: hidden; /* 🚫 no horizontal scroll */
+  font-size: 17px;
   color: #4b2e1e;
-  text-align: left;
   line-height: 1.6;
+  text-align: left;
+  padding-right: 8px;
+}
+
+/* Hide scrollbar (optional aesthetic) */
+.parchment-text::-webkit-scrollbar {
+  width: 6px;
+}
+
+.parchment-text::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+
+/* Side Image */
+.letter-side-image img {
+  width: 350px;
+  height: auto;
+  border-radius: 25px;
+  box-shadow: 0 0 40px rgba(255,105,180,0.6);
+  transition: transform 0.6s ease;
+}
+
+.letter-side-image img:hover {
+  transform: scale(1.05);
 }
