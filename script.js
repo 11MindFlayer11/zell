@@ -6,7 +6,6 @@ function goToPage(id) {
 function handleYesClick(event) {
   const music = document.getElementById("bgMusic");
   music.play();
-
   createGlitter(event);
 
   setTimeout(() => {
@@ -33,16 +32,35 @@ function createGlitter(event) {
   }
 }
 
+const overlay = document.getElementById("bgOverlay");
 
-// Scroll reveal animation
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
+
+    // Add fade-in effect for elements
     if (entry.isIntersecting) {
       entry.target.classList.add("visible");
     }
+
+    // Dark overlay logic
+    if (
+      entry.target.classList.contains("panel-img") ||
+      entry.target.classList.contains("large-panel-img") ||
+      entry.target.classList.contains("parchment-wrapper")
+    ) {
+      if (entry.isIntersecting) {
+        overlay.style.background = "rgba(0,0,0,0.45)";
+      } else {
+        overlay.style.background = "rgba(0,0,0,0)";
+      }
+    }
+
   });
 }, { threshold: 0.6 });
 
-document.querySelectorAll(".scroll-text").forEach(el => {
-  observer.observe(el);
-});
+document.querySelectorAll(
+  ".scroll-text, .panel-img, .large-panel-img, .parchment-wrapper"
+).forEach(el => observer.observe(el));
+
+document.querySelectorAll(".scroll-text, .panel-img, .large-panel-img")
+  .forEach(el => observer.observe(el));

@@ -10,15 +10,16 @@
 <body>
 
   <audio id="bgMusic" src="song.mp3" loop></audio>
+  <div id="bgOverlay"></div>
 
   <!-- PAGE 1 -->
-<div id="page1" class="page active">
-  <h1>Will u be my Valentine? 💖✨</h1>
+  <div id="page1" class="page active">
+    <h1>Will u be my Valentine? 💖✨</h1>
+    <button class="main-yes-btn" onclick="handleYesClick(event)">
+      Yes 💘
+    </button>
+  </div>
 
-  <button class="main-yes-btn" onclick="handleYesClick(event)">
-    Yes 💘
-  </button>
-</div>
 
 
   <!-- PAGE 3 -->
@@ -34,71 +35,128 @@
     </button>
   </div>
 
-  <!-- PAGE 5 - FULL SCROLL STORY -->
+  <!-- PAGE 5 - COMPLETE SCROLL STORY -->
   <div id="page5" class="page scroll-page">
 
-    <!-- Former Page 4 merged here -->
     <section class="scroll-section">
       <h1 class="scroll-text">This wasn’t an accident.</h1>
       <h3 class="scroll-text">(Scroll down)</h3>
+    </section>
 
+    <!-- LARGE IMAGE PANEL -->
+    <section class="scroll-section large-image-panel">
+      <img src="MEDIA/1.jpeg" class="large-panel-img">
     </section>
 
     <section class="scroll-section">
-      <h1 class="scroll-text">
-        I strategically placed myself in your life.
-      </h1>
+      <h1 class="scroll-text">I strategically placed myself in your life.</h1>
+    </section>
+
+    <!-- 3 IMAGE PANEL -->
+    <section class="scroll-section image-panel">
+      <div class="image-row">
+        <img src="MEDIA/2.1.png" class="panel-img">
+        <img src="MEDIA/2.2.jpeg" class="panel-img">
+        <img src="MEDIA/2.3.png" class="panel-img">
+      </div>
     </section>
 
     <section class="scroll-section">
-      <h1 class="scroll-text">
-        I executed phase one: make her laugh.
-      </h1>
+      <h1 class="scroll-text">I executed phase one: make her laugh.</h1>
     </section>
 
     <section class="scroll-section">
-      <h1 class="scroll-text">
-        Or atleast... tried to?
-      </h1>
+      <h1 class="scroll-text">Or atleast... tried to?</h1>
     </section>
+
+    <!-- LARGE IMAGE PANEL -->
+    <section class="scroll-section large-image-panel">
+      <img src="MEDIA/4.jpeg" class="large-panel-img">
+    </section>
+
 
     <section class="scroll-section">
-      <h1 class="scroll-text">
-        cuz what is this 😭😭😭 
-      </h1>
-      <h3 class ="scroll-text"> (i love it;)</h3>
+      <h1 class="scroll-text">cuz what is this 😭😭😭</h1>
+      <h3 class="scroll-text">(i love it;)</h3>
     </section>
+
+    <!-- 3 IMAGE PANEL -->
+    <section class="scroll-section image-panel">
+      <div class="image-row">
+        <img src="MEDIA/5.1.jpeg" class="panel-img">
+        <img src="MEDIA/5.2.jpeg" class="panel-img">
+        <img src="MEDIA/5.3.jpeg" class="panel-img">
+        <img src="MEDIA/5.4.jpeg" class="panel-img">
+        <img src="MEDIA/5.5.jpeg" class="panel-img">
+      </div>
+    </section>
+
 
     <section class="scroll-section">
-      <h1 class="scroll-text">
-        But the unexpected parttt?
-      </h1>
+      <h1 class="scroll-text">But the unexpected parttt?</h1>
     </section>
 
-    <!-- Scroll Story -->
     <section class="scroll-section">
       <h1 class="scroll-text">
         I started liking you a little
         <span class="big-word">more</span>
         than I planned.
       </h1>
+      </section>
+      
+      <!-- LARGE IMAGE PANEL -->
+    <section class="scroll-section large-image-panel">
+      <img src="MEDIA/7.jpeg" class="large-panel-img">
     </section>
+
 
     <section class="scroll-section">
       <h1 class="scroll-text">It was supposed to be chill.</h1>
     </section>
 
+    <!-- LARGE IMAGE PANEL -->
+    <section class="scroll-section large-image-panel">
+      <img src="MEDIA/8.jpeg" class="large-panel-img">
+    </section>
+
+
     <section class="scroll-section">
       <h1 class="scroll-text">Weren’t we supposed to be just friends?</h1>
     </section>
+
+    <!-- 3 IMAGE PANEL -->
+    <section class="scroll-section image-panel">
+      <div class="image-row">
+        <img src="MEDIA/9.1.jpeg" class="panel-img">
+        <img src="MEDIA/9.2.png" class="panel-img">
+      </div>
+    </section>
+
 
     <section class="scroll-section">
       <h1 class="scroll-text">Very “haha we’ll see where this goes.”</h1>
     </section>
 
+    <!-- LARGE IMAGE PANEL -->
+    <section class="scroll-section large-image-panel">
+      <img src="MEDIA/10.jpeg" class="large-panel-img">
+    </section>
+
+
+
     <section class="scroll-section">
       <h1 class="scroll-text">But then you kept being you.</h1>
     </section>
+
+    <!-- 3 IMAGE PANEL -->
+    <section class="scroll-section image-panel">
+      <div class="image-row">
+        <img src="MEDIA/11.1.jpeg" class="panel-img">
+        <img src="MEDIA/11.2.jpeg" class="panel-img">
+        <img src="MEDIA/11.3.jpeg" class="panel-img">
+      </div>
+    </section>
+
 
     <section class="scroll-section">
       <h1 class="scroll-text">And that’s extremely unfair.</h1>
@@ -122,6 +180,12 @@
       </h1>
     </section>
 
+    <!-- LARGE IMAGE PANEL -->
+    <section class="scroll-section large-image-panel">
+      <img src="MEDIA/12.jpeg" class="large-panel-img">
+    </section>
+
+
     <section class="scroll-section">
       <h1 class="scroll-text">So no…</h1>
     </section>
@@ -136,10 +200,29 @@
       <h1 class="scroll-text">It’s only been a month.</h1>
     </section>
 
+    <!-- 3 IMAGE PANEL -->
+    <section class="scroll-section image-panel">
+      <div class="image-row">
+        <img src="MEDIA/14.1.jpeg" class="panel-img">
+        <img src="MEDIA/14.2.jpeg" class="panel-img">
+        <img src="MEDIA/14.3.jpeg" class="panel-img">
+      </div>
+    </section>
+
+
     <section class="scroll-section">
       <h1 class="scroll-text">
         But it’s been a really, really nice month.
       </h1>
+    </section>
+
+    <!-- 3 IMAGE PANEL -->
+    <section class="scroll-section image-panel">
+      <div class="image-row">
+        <img src="MEDIA/14.4.jpeg" class="panel-img">
+        <img src="MEDIA/14.5.jpeg" class="panel-img">
+        <img src="MEDIA/14.6.jpeg" class="panel-img">
+      </div>
     </section>
 
     <section class="scroll-section">
@@ -147,41 +230,52 @@
         And I’d very much like many more.
       </h1>
     </section>
+    <!-- 3 IMAGE PANEL -->
+    <section class="scroll-section image-panel">
+      <div class="image-row">
+        <img src="MEDIA/14.7.jpeg" class="panel-img">
+        <img src="MEDIA/14.8.jpeg" class="panel-img">
+        <img src="MEDIA/14.9.jpeg" class="panel-img">
+      </div>
+    </section>
 
-    <!-- Final Question -->
     <section class="scroll-section">
       <h1 class="scroll-text">
-        So… will you keep being my Valentine?
+        So, Ms Zaliiii… would you like to keep being my Valentine?
       </h1>
     </section>
 
-    <!-- Letter Scroll -->
+    <section class="scroll-section">
+      <h1 class="scroll-text">
+        perchance.
+      </h1>
+    </section>
+
+    <!-- LETTER SCROLL -->
     <section class="scroll-section letter-section">
-
       <div class="parchment-wrapper">
-        <img src="parch.jpg"
-             class="parchment-img" />
-
+        <img src="parch2.png" class="parchment-img" />
         <div class="parchment-text">
-          <h2>Dear You,</h2>
-
-          <p>
-            (This is placeholder text.)
+          <h2>Dear Blorbo McSnout,</h2>
+          <p>Sunflowers, turn to each other; in the absence of sun. Had I been a sunflower, I'd really like to turn towards you on a shady day. 
+            Sunshine, is what you remind me of always - and thats why this song just makes you appear in my mind always. 
+            I still remember the day, we were on OAT terrace, listening to music and you were laying your head on my shoulder. 
+            You know? I told myself very strictly, that I wont confess first, I didnt want to lose whatever we had, just in chase
+            you had something else in my mind. But then, this song plays.. and I think to myself, this is the moment. You need to say it,
+            THERE WONT BE A BETTER TIME, and so, i did. I really like you Anjali - from this, to spamming I lovvee youuu; I guess we've come far.
+            Ill be honest, i still dont know what exactly love's supposed to be, and it still seems a very big word to me. But sometimes how you make me feel - 
+            Even sipmly saying it DOESNT FEEL ENOUGH AT ALL. So I dont know, I guess - I'll stop thinking and just spam iloveyouiloveyouiloveyouiloveyouiloveyouiloveyou
+            iloveyouiloveyouiloveyouiloveyouiloveyouiloveyouiloveyouiloveyouiloveyou...(it still ISNT FREAKING ENOUGH) till i hopefully feel satisfied enough. 
           </p>
-
-          <p>
-            You can replace this entire section
-            with your actual handwritten-style letter.
+          <p>Thankyou, for the time and effort you've put for me. I could hear you wrapping gifts on call, even when you were v tired and running without sleep. 
+            Tbh, everyday's valentines with youu, except that ig I'll be extra vocal, without you pushing me today -_- 
+            I know I can be a bit irritating at times, but thanks for being patient with me. I hope you like being w me tooo.
           </p>
-
           <p>
-            Add as many paragraphs as you want.
-            This area scrolls inside the parchment.
+            Shivansh
           </p>
-
         </div>
       </div>
-
     </section>
 
   </div>
